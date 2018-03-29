@@ -48,6 +48,8 @@ public class Update extends javax.swing.JFrame {
         jtfAnno = new javax.swing.JTextField();
         jtfNombre = new javax.swing.JTextField();
 
+        setResizable(false);
+
         jLabel1.setText("Name");
 
         jLabel2.setText("Year");
