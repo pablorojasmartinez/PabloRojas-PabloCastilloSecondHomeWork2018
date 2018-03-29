@@ -32,6 +32,7 @@ public class Show extends JInternalFrame {
         super();
         this.setSize(800, 800);
         init();
+        this.setTitle("SHOW");
         this.setVisible(true);
         this.setClosable(true);
     } // constructor
@@ -58,7 +59,6 @@ public class Show extends JInternalFrame {
         JScrollPane scrollPane = new JScrollPane(this.jtbPrueba);
         this.getContentPane().add(scrollPane);
 
-        System.out.println("tablajava.Ventana.init()");
     } // init
 
 }

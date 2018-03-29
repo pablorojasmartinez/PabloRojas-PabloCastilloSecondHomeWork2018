@@ -13,17 +13,21 @@ import java.io.IOException;
  *
  * @author Pablo Rojas Martínez
  */
+
+
+
+//The methods in this class are used to call the methods of the class file and not to interact directly with that class
 public class BusinessCar {
 
     CarFile carFile;
 
     public BusinessCar() throws IOException {
         carFile = new CarFile();
-    }
+    }//constructor
     
     public boolean insertarAuto(Car car) throws IOException{
         return this.carFile.insertCar(car);
-    }
+    } 
     
     public Car getCar(int position) throws IOException{
         return this.carFile.getCar(position);

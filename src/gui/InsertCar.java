@@ -24,6 +24,7 @@ public class InsertCar extends javax.swing.JInternalFrame {
      */
     public InsertCar() {
         initComponents();
+        this.setTitle("INSERT");
     }
 
     /**
@@ -201,22 +202,23 @@ public class InsertCar extends javax.swing.JInternalFrame {
                 BusinessCar businessAutomovil = new BusinessCar();
                 if (!businessAutomovil.check(serie)) {
                     if (businessAutomovil.insertarAuto(automovil)) {
-                        JOptionPane.showMessageDialog(null, "Auto insertado");
+                        JOptionPane.showMessageDialog(null, "Saved car");
                         jtfNombre.setText("");
                         jtfAnno.setText("");
                         jtfKilo.setText("");
                         jtfSerie.setText("");
 
                     } else {
-                        JOptionPane.showMessageDialog(null, "Auto no insertado");
+                        JOptionPane.showMessageDialog(null, "Error! Car no saved");
 
                     }
                 } else {
-                    JOptionPane.showMessageDialog(null, "Auto ya existente");
+                    JOptionPane.showMessageDialog(null, "Already existing car");
+                    jtfSerie.setText("");
 
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "El tamaño del nombre excede lo permitido");
+                JOptionPane.showMessageDialog(null, "The size of the name exceeds the allowed");
                 jtfNombre.setText("");
             }
         } catch (IOException ex) {

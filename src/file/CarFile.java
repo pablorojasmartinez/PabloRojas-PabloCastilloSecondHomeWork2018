@@ -25,7 +25,7 @@ public class CarFile {
     private String path;
 
     public CarFile() throws IOException {
-        this.path = "ArchivoAuto";
+        this.path = "CarFile";
         File file = new File(this.path);
         start(file);
     }//Constructor

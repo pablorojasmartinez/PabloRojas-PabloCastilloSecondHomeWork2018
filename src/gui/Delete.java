@@ -22,6 +22,7 @@ public class Delete extends javax.swing.JInternalFrame {
      */
     public Delete() {
         initComponents();
+        this.setTitle("DELETE");
     }
 
     /**
@@ -84,7 +85,8 @@ public class Delete extends javax.swing.JInternalFrame {
         try {
             BusinessCar businessAutomovil = new BusinessCar();
             businessAutomovil.delete(Integer.parseInt(jtfSerie.getText()));
-            JOptionPane.showMessageDialog(null, "Automovil con la serie "+jtfSerie.getText()+" ha sido borrado");
+            JOptionPane.showMessageDialog(null, "Car with the id "+jtfSerie.getText()+" has been deleted");
+           jtfSerie.setText("");
         } catch (IOException ex) {
             Logger.getLogger(Delete.class.getName()).log(Level.SEVERE, null, ex);
         }

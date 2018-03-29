@@ -20,7 +20,8 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
-        this.setSize(1000, 800);
+        this.setSize(900, 700);
+        this.setTitle("CARS");
     }
 
     /**
@@ -70,7 +71,7 @@ public class Menu extends javax.swing.JFrame {
 
         jMenu2.setText("Show");
 
-        jMenuItem2.setText("List of cars");
+        jMenuItem2.setText("List of Cars");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -135,7 +136,7 @@ public class Menu extends javax.swing.JFrame {
 //        jDesktopPane1.add(actualizar);
 //        actualizar.setVisible(true);
         
-        Buscar buscar = new Buscar();
+        Search buscar = new Search();
         jDesktopPane1.add(buscar);
         buscar.setVisible(true);
         

@@ -26,6 +26,7 @@ public class Update extends javax.swing.JFrame {
     public Update(Car car) {
         this.car = car;
         initComponents();
+        this.setTitle("UPDATE");
     }
 
     /**
@@ -132,6 +133,7 @@ public class Update extends javax.swing.JFrame {
             businessAutomovil.delete(car.getId());
             businessAutomovil.insertarAuto(car);
             JOptionPane.showMessageDialog(null, car);
+            this.dispose();
         } catch (IOException ex) {
             Logger.getLogger(Update.class.getName()).log(Level.SEVERE, null, ex);
         }

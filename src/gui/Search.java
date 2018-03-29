@@ -16,13 +16,14 @@ import javax.swing.JOptionPane;
  *
  * @author Pablo Rojas Martínez
  */
-public class Buscar extends javax.swing.JInternalFrame {
+public class Search extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form Buscar
      */
-    public Buscar() {
+    public Search() {
         initComponents();
+        this.setTitle("SEARCH");
     }
 
     /**
@@ -83,18 +84,26 @@ public class Buscar extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       
         try {
+       
             Car automovil;
             int serie =  Integer.parseInt(jtfSerie.getText());
             BusinessCar businessAutomovil = new BusinessCar();
-            JOptionPane.showMessageDialog(null,businessAutomovil.search(serie));
+            //JOptionPane.showMessageDialog(null,businessAutomovil.search(serie));
+            if(businessAutomovil.search(serie) != null){
+          
             automovil=businessAutomovil.search(serie);
            this.dispose();
            
         Update actualizar = new Update(automovil);
         
         actualizar.setVisible(true);
+            }
+            else{
+                 JOptionPane.showMessageDialog(null,"The id does not exist");
+                 jtfSerie.setText("");
+            }
         } catch (IOException ex) {
-            Logger.getLogger(Buscar.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, ex);
         }
        
     }//GEN-LAST:event_jButton1ActionPerformed
